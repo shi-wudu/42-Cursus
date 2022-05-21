@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	long long	number;
 	int			signal;
@@ -29,7 +29,7 @@ int	ft_atoi(char *str)
 			signal *= -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
 		number = number * 10 + str[i] - 48;
 		i++;

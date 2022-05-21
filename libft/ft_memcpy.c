@@ -6,7 +6,7 @@
 /*   By: maleandr <maleandr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:12:30 by maleandr          #+#    #+#             */
-/*   Updated: 2022/02/28 13:53:38 by maleandr         ###   ########.fr       */
+/*   Updated: 2022/05/21 19:17:02 by maleandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*str;
 	const char	*stri;
 
+	if (!dst && !src)
+		return (NULL);
 	str = dst;
 	stri = src;
 	i = -1;
