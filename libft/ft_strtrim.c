@@ -20,11 +20,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL)
 		return (NULL);
+		
 	a = 0;
 	z = ft_strlen(s1);
-	while (ft_strchr(set, *(s1 + a)) != NULL) //first char
+	while (s1[a] && ft_strchr(set, s1[a])) //first char
 		a++;
-	while (ft_strrchr(set, *(s1 + z - 1)) != NULL) //last char
+	while (z > a && ft_strchr(set, s1[z - 1])) //last char
 		z--;
 	str = ft_substr(s1, a, z - a);
 	return (str);
