@@ -14,10 +14,14 @@
 
 void    *ft_calloc(size_t str, size_t n)
 {
+	size_t num;
 	void	*ptr;
-	ptr = (void *)malloc(str * n);
-	if (ptr == NULL)
+
+	num = str * n;
+
+	ptr = (void *)malloc(num);
+	if (num / n != str)
 	return (NULL);
-	ft_bzero(ptr, str * n);
+	ft_bzero(ptr, num);
 	return (ptr);
 }

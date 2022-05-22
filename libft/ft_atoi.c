@@ -31,12 +31,12 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		number = number * 10 + str[i] - 48;
+		number = number * 10 + signal * (str[i] - 48);
 		i++;
 		if (number > 2147483647)
 			return (-1);
 		if (number < -2147483648)
 			return (0);
 	}
-	return (number * signal);
+	return (number);
 }

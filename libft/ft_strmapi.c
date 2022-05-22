@@ -21,11 +21,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
     if (s == NULL || f == NULL)
     return NULL;
 
-    resultado = (malloc(sizeof(char) * ft_strlen(s)));
-    while (resultado[i])
+    resultado = ft_strdup(s);
+    if (resultado == NULL)
+        return (NULL);
+    i = -1;
+    while (resultado[++i])
     {
-        resultado = (*f)(i, resultado[i]);
-        i++;
+        resultado[i] = f(i, resultado[i]);
     }
-    return (resultado)
+    return (resultado);
 }
