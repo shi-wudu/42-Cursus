@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int     ft_size(int n)
+static int     ft_size(int n)
 {
     int len;
 
@@ -20,7 +21,10 @@ int     ft_size(int n)
      if (n == 0)
         return (1);
     if (n < 0)
+    {
+        len++;
         n = n * -1;
+    }
     while (n > 0)
     {
         n = n / 10;
@@ -40,9 +44,7 @@ char *ft_itoa(int n)
     if (new == NULL)
         return (NULL);
     if (n == -2147483648)
-            return (NULL);
-    if (n < 0)
-        size++;
+            return (ft_strdup("-2147483648"));
     new[size--] = '\0';
     if (n < 0)
     {
