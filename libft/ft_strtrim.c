@@ -31,10 +31,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/* int main()
+/*int main()
 {
     char const s1[] = "Bom omB";
     char const s2[] = "Bo";
     
     printf("My func = %s", ft_strtrim(s1, s2));
-} */
+}*/
