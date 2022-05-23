@@ -6,7 +6,7 @@
 /*   By: maleandr <maleandr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 23:40:04 by maleandr          #+#    #+#             */
-/*   Updated: 2022/05/21 23:40:20 by maleandr         ###   ########.fr       */
+/*   Updated: 2022/05/23 16:53:55 by maleandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return ;
+		return NULL;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);
