@@ -19,9 +19,9 @@ void    *ft_calloc(size_t str, size_t n)
 
 	num = str * n;
 
+	if (num / n != str )
+		return NULL;
 	ptr = (void *)malloc(num);
-	if (num / n != str)
-	return (NULL);
 	ft_bzero(ptr, num);
 	return (ptr);
 }
